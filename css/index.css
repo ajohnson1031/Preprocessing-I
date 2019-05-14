@@ -189,11 +189,32 @@ section h3 {
   font-family: "Muli", sans-serif;
   padding: 15px 20px;
 }
+section img {
+  width: 100%;
+}
+#details {
+  display: flex;
+  width: 100%;
+  height: auto;
+  font-size: 1.3rem;
+  font-family: "Muli", sans-serif;
+}
+#details div {
+  width: calc(50% - 40px);
+  padding: 15px 0 15px 20px;
+  text-align: left;
+}
+#details div:first-child {
+  font-weight: 900;
+}
+#details ul li {
+  line-height: 2.5rem;
+}
 .one-third {
-  width: calc(34% - 40px);
+  width: calc(40% - 40px);
   height: auto;
 }
-.half {
-  width: calc(66% - 40px);
+.two-thirds {
+  width: calc(60% - 40px);
   height: auto;
 }

@@ -180,3 +180,20 @@ header h1 {
   font-family: "Muli", sans-serif;
   font-size: 2.75rem;
 }
+section {
+  background-color: #fff;
+}
+section h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  font-family: "Muli", sans-serif;
+  padding: 15px 20px;
+}
+.one-third {
+  width: calc(34% - 40px);
+  height: auto;
+}
+.half {
+  width: calc(66% - 40px);
+  height: auto;
+}

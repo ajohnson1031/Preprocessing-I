@@ -220,3 +220,29 @@ section img {
   width: calc(60% - 40px);
   height: auto;
 }
+.two-thirds h3 {
+  border-bottom: 3px solid #e5e5e5;
+  width: 100%;
+}
+div.resume {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 1.3rem;
+  font-family: "Muli", sans-serif;
+  padding-top: 30px;
+}
+div.resume div.info-section {
+  width: calc(25% - 20px);
+  padding-left: 20px;
+  text-align: left;
+}
+div.resume div.info-section ul li {
+  line-height: 2.5rem;
+}
+div.resume div.info-section:nth-child(odd) {
+  font-weight: 900;
+}
+div.resume .fa-star {
+  color: #ffae00;
+}

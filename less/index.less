@@ -138,6 +138,7 @@ table {
 
 @muli: "Muli", sans-serif;
 @mercury: #e5e5e5;
+@yellow-sea: #ffae00;
 
 html,
 body {
@@ -216,4 +217,36 @@ section {
 .two-thirds {
   width: calc(60% - 40px);
   height: auto;
+
+  h3 {
+    border-bottom: 3px solid @mercury;
+    width: 100%;
+  }
+}
+
+div.resume {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 1.3rem;
+  font-family: @muli;
+  padding-top: 30px;
+
+  div.info-section {
+    width: calc(25% - 20px);
+    padding-left: 20px;
+    text-align: left;
+
+    ul li {
+      line-height: 2.5rem;
+    }
+  }
+
+  div.info-section:nth-child(odd) {
+    font-weight: 900;
+  }
+
+  .fa-star {
+    color: @yellow-sea;
+  }
 }

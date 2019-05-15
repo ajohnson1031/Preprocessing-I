@@ -128,28 +128,36 @@ table {
 }
 /* Set every element's box-sizing to border-box */
 @font-face {
-  font-family: 'Muli';
+  font-family: "Muli";
   font-style: normal;
   font-weight: 400;
-  src: local('Muli Regular'), local('Muli-Regular'), url(https://fonts.gstatic.com/s/muli/v13/7Auwp_0qiz-afTLGKA.ttf) format('truetype');
+  src: local("Muli Regular"), local("Muli-Regular"),
+    url(https://fonts.gstatic.com/s/muli/v13/7Auwp_0qiz-afTLGKA.ttf)
+      format("truetype");
 }
 @font-face {
-  font-family: 'Muli';
+  font-family: "Muli";
   font-style: normal;
   font-weight: 600;
-  src: local('Muli SemiBold'), local('Muli-SemiBold'), url(https://fonts.gstatic.com/s/muli/v13/7Au_p_0qiz-ade3iOCX2yg.ttf) format('truetype');
+  src: local("Muli SemiBold"), local("Muli-SemiBold"),
+    url(https://fonts.gstatic.com/s/muli/v13/7Au_p_0qiz-ade3iOCX2yg.ttf)
+      format("truetype");
 }
 @font-face {
-  font-family: 'Muli';
+  font-family: "Muli";
   font-style: normal;
   font-weight: 700;
-  src: local('Muli Bold'), local('Muli-Bold'), url(https://fonts.gstatic.com/s/muli/v13/7Au_p_0qiz-adYnjOCX2yg.ttf) format('truetype');
+  src: local("Muli Bold"), local("Muli-Bold"),
+    url(https://fonts.gstatic.com/s/muli/v13/7Au_p_0qiz-adYnjOCX2yg.ttf)
+      format("truetype");
 }
 @font-face {
-  font-family: 'Muli';
+  font-family: "Muli";
   font-style: normal;
   font-weight: 800;
-  src: local('Muli ExtraBold'), local('Muli-ExtraBold'), url(https://fonts.gstatic.com/s/muli/v13/7Au_p_0qiz-adZXgOCX2yg.ttf) format('truetype');
+  src: local("Muli ExtraBold"), local("Muli-ExtraBold"),
+    url(https://fonts.gstatic.com/s/muli/v13/7Au_p_0qiz-adZXgOCX2yg.ttf)
+      format("truetype");
 }
 * {
   box-sizing: border-box;
@@ -270,11 +278,12 @@ div.contact {
 div.contact div {
   padding: 20px;
   line-height: 2.5rem;
+  width: 38%;
 }
 div.contact div:first-child {
-  width: 25%;
   font-weight: 700;
 }
+
 div.contact a {
   color: #0067d0;
   text-decoration: none;
@@ -284,4 +293,35 @@ div.contact a {
 }
 div.contact a:hover {
   color: #003e7e;
+}
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  header {
+    margin-top: 0;
+  }
+
+  div.details {
+    border-bottom: 3px solid #e5e5e5;
+  }
+  .one-third,
+  .two-thirds {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  div.resume div.info-section {
+    width: 50%;
+  }
+
+  div.contact div:first-child {
+    padding: 20px 0 20px 20px;
+  }
+
+  div.contact div:last-child {
+    padding: 20px 0;
+  }
 }

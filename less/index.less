@@ -130,18 +130,27 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+
+//Font Imports
 @import url("https://fonts.googleapis.com/css?family=Muli:400,600,700,800");
 
 * {
   box-sizing: border-box;
 }
 
+//Variables
 @muli: "Muli", sans-serif;
 @platinum: #ffffff;
 @mercury: #e5e5e5;
 @yellow-sea: #ffae00;
 @science-blue: #0067d0;
 @congress-blue: #003e7e;
+
+//Mixins
+.flexit {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 html,
 body {
@@ -151,8 +160,7 @@ body {
 }
 
 .container {
-  display: flex;
-  flex-wrap: wrap;
+  .flexit();
   justify-content: space-evenly;
   align-items: initial;
   height: auto;
@@ -241,8 +249,7 @@ section {
 }
 
 div.resume {
-  display: flex;
-  flex-wrap: wrap;
+  .flexit();
   width: 100%;
   font-size: 1.4rem;
   font-family: @muli;

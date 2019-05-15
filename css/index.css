@@ -154,6 +154,10 @@ table {
 * {
   box-sizing: border-box;
 }
+.flexit {
+  display: flex;
+  flex-wrap: wrap;
+}
 html,
 body {
   font-size: 10px;

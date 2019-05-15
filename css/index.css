@@ -191,8 +191,9 @@ body {
 }
 .container header nav {
   display: flex;
+  justify-content: center;
   font-family: "Muli", sans-serif;
-  width: 400px;
+  width: 320px;
   align-items: center;
   font-size: 1.2rem;
   font-weight: 700;

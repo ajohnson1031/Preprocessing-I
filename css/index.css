@@ -199,7 +199,7 @@ section img {
   display: flex;
   width: 100%;
   height: auto;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-family: "Muli", sans-serif;
 }
 .details div {
@@ -239,7 +239,7 @@ div.resume {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-family: "Muli", sans-serif;
   padding-top: 30px;
 }
@@ -256,4 +256,28 @@ div.resume div.info-section:nth-child(odd) {
 }
 div.resume .fa-star {
   color: #ffae00;
+}
+div.contact {
+  display: flex;
+  width: 100%;
+  font-family: "Muli", sans-serif;
+  font-size: 1.4rem;
+}
+div.contact div {
+  padding: 20px;
+  line-height: 2.5rem;
+}
+div.contact div:first-child {
+  width: 25%;
+  font-weight: 700;
+}
+div.contact a {
+  color: #0067d0;
+  text-decoration: none;
+  font-weight: 700;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+div.contact a:hover {
+  color: #003e7e;
 }

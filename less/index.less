@@ -140,6 +140,8 @@ table {
 @platinum: #ffffff;
 @mercury: #e5e5e5;
 @yellow-sea: #ffae00;
+@science-blue: #0067d0;
+@congress-blue: #003e7e;
 
 html,
 body {
@@ -193,7 +195,7 @@ section {
   display: flex;
   width: 100%;
   height: auto;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-family: @muli;
 
   div {
@@ -242,7 +244,7 @@ div.resume {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-family: @muli;
   padding-top: 30px;
 
@@ -262,5 +264,34 @@ div.resume {
 
   .fa-star {
     color: @yellow-sea;
+  }
+}
+
+div.contact {
+  display: flex;
+  width: 100%;
+  font-family: @muli;
+  font-size: 1.4rem;
+
+  div {
+    padding: 20px;
+    line-height: 2.5rem;
+  }
+
+  div:first-child {
+    width: 25%;
+    font-weight: 700;
+  }
+
+  a {
+    color: @science-blue;
+    text-decoration: none;
+    font-weight: 700;
+    transition-duration: 0.5s;
+    cursor: pointer;
+  }
+
+  a:hover {
+    color: @congress-blue;
   }
 }

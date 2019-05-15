@@ -354,9 +354,6 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
-.container section:last-child .work-item {
-  padding: 20px;
-}
 .container section:last-child .company-details {
   width: 15%;
   height: 120px;
@@ -381,7 +378,25 @@ body {
   background-size: 100%;
 }
 .container section:last-child .work-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 85%;
+  font-family: "Muli", sans-serif;
+  padding: 0 20px 20px;
+}
+.container section:last-child .work-item h4 {
+  width: 90%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0 0 5px 0;
+  border-bottom: 3px solid #e5e5e5;
+  margin-bottom: 10px;
+}
+.container section:last-child .work-item p {
+  width: 90%;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 @media (max-width: 500px) {
   .container {

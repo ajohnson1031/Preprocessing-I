@@ -153,6 +153,10 @@ table {
   flex-wrap: wrap;
 }
 
+.border-it {
+  border-bottom: 3px solid @mercury;
+}
+
 html,
 body {
   font-size: 10px;
@@ -224,12 +228,13 @@ body {
       font-weight: 700;
       font-family: @muli;
       padding: 15px 20px;
+      .border-it();
     }
 
     img {
       width: 100%;
       border-top: 3px solid @mercury;
-      border-bottom: 3px solid @mercury;
+      .border-it();
     }
   }
 
@@ -265,7 +270,6 @@ body {
     height: auto;
 
     h3 {
-      border-bottom: 3px solid @mercury;
       width: 100%;
     }
 
@@ -365,7 +369,42 @@ body {
       color: @congress-blue;
     }
   }
+
+  section:last-child {
+    width: calc(100% - 53px);
+    margin-top: 25px;
+
+    h3 {
+      width: 100%;
+    }
+
+    .work-item-wrap {
+      width: 100%;
+      .flexit();
+    }
+
+    .work-item-divider {
+      width: 90%;
+      height: 5px;
+      background-color: @mercury;
+      margin: 10px auto;
+    }
+
+    .company-details,
+    .work-item {
+      padding: 20px;
+    }
+
+    .company-details {
+      width: 34%;
+    }
+
+    .work-item {
+      width: 66%;
+    }
+  }
 }
+
 @media (max-width: 500px) {
   .container {
     flex-direction: column;

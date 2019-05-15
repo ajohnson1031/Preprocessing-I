@@ -158,6 +158,9 @@ table {
   display: flex;
   flex-wrap: wrap;
 }
+.border-it {
+  border-bottom: 3px solid #e5e5e5;
+}
 html,
 body {
   font-size: 10px;
@@ -222,6 +225,7 @@ body {
   font-weight: 700;
   font-family: "Muli", sans-serif;
   padding: 15px 20px;
+  border-bottom: 3px solid #e5e5e5;
 }
 .container section img {
   width: 100%;
@@ -255,7 +259,6 @@ body {
   height: auto;
 }
 .container .two-thirds h3 {
-  border-bottom: 3px solid #e5e5e5;
   width: 100%;
 }
 .container .two-thirds .mid-header {
@@ -337,6 +340,34 @@ body {
 }
 .container div.contact a:hover {
   color: #003e7e;
+}
+.container section:last-child {
+  width: calc(100% - 53px);
+  margin-top: 25px;
+}
+.container section:last-child h3 {
+  width: 100%;
+}
+.container section:last-child .work-item-wrap {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.container section:last-child .work-item-divider {
+  width: 90%;
+  height: 5px;
+  background-color: #e5e5e5;
+  margin: 10px auto;
+}
+.container section:last-child .company-details,
+.container section:last-child .work-item {
+  padding: 20px;
+}
+.container section:last-child .company-details {
+  width: 34%;
+}
+.container section:last-child .work-item {
+  width: 66%;
 }
 @media (max-width: 500px) {
   .container {

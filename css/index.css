@@ -176,7 +176,7 @@ body {
   max-width: 1024px;
   margin: 0 auto;
   background-color: #e5e5e5;
-  padding-bottom: 100px;
+  padding-bottom: 20px;
 }
 .container header {
   display: flex;
@@ -350,24 +350,38 @@ body {
 }
 .container section:last-child .work-item-wrap {
   width: 100%;
+  margin: 20px;
   display: flex;
   flex-wrap: wrap;
 }
-.container section:last-child .work-item-divider {
-  width: 90%;
-  height: 5px;
-  background-color: #e5e5e5;
-  margin: 10px auto;
-}
-.container section:last-child .company-details,
 .container section:last-child .work-item {
   padding: 20px;
 }
 .container section:last-child .company-details {
-  width: 34%;
+  width: 15%;
+  height: 120px;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.container section:last-child .first {
+  background-image: url("../img/square_nyp_black.png");
+  background-color: #cc3333;
+}
+.container section:last-child .second {
+  background-image: url("../img/tremor-video-dsp.png");
+  border: 1px solid #e5e5e5;
+}
+.container section:last-child .third {
+  background-image: url("../img/future-memories.jpg");
+  background-size: 100%;
+}
+.container section:last-child .fourth {
+  background-image: url("../img/artispot.jpg");
+  background-size: 100%;
 }
 .container section:last-child .work-item {
-  width: 66%;
+  width: 85%;
 }
 @media (max-width: 500px) {
   .container {

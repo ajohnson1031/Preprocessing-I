@@ -1,1 +1,471 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Muli Regular'), local('Muli-Regular'), url(https://fonts.gstatic.com/s/muli/v13/7Auwp_0qiz-afTLGKA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Muli SemiBold'), local('Muli-SemiBold'), url(https://fonts.gstatic.com/s/muli/v13/7Au_p_0qiz-ade3iOCX2yg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Muli Bold'), local('Muli-Bold'), url(https://fonts.gstatic.com/s/muli/v13/7Au_p_0qiz-adYnjOCX2yg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Muli ExtraBold'), local('Muli-ExtraBold'), url(https://fonts.gstatic.com/s/muli/v13/7Au_p_0qiz-adZXgOCX2yg.ttf) format('truetype');
+}
+* {
+  box-sizing: border-box;
+}
+.flexit {
+  display: flex;
+  flex-wrap: wrap;
+}
+.border-it {
+  border-bottom: 3px solid #e5e5e5;
+}
+.border-all {
+  border-top: 3px solid #e5e5e5;
+  border-bottom: 3px solid #e5e5e5;
+}
+html,
+body {
+  font-size: 10px;
+  font-size: 62.5%;
+  height: 100%;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: initial;
+  height: auto;
+  max-width: 1024px;
+  margin: 0 auto;
+  background-color: #e5e5e5;
+  padding-bottom: 20px;
+}
+.container header {
+  display: flex;
+  width: 100%;
+  margin-top: 40px;
+  padding: 20px 30px;
+}
+.container header h1 {
+  font-family: "Muli", sans-serif;
+  font-size: 2.75rem;
+  font-weight: 700;
+}
+.container header nav {
+  display: flex;
+  justify-content: center;
+  font-family: "Muli", sans-serif;
+  width: 320px;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 30px;
+  border-bottom: 3px solid #ffae00;
+}
+.container header nav a {
+  text-decoration: none;
+  background-color: #0067d0;
+  padding: 5px 12px;
+  color: #fff;
+  margin-right: 1px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+.container header nav a:first-child {
+  border-top-left-radius: 3px;
+}
+.container header nav a:last-child {
+  border-top-right-radius: 3px;
+}
+.container header nav a:hover {
+  background-color: #389aff;
+}
+.container section {
+  background-color: #ffffff;
+}
+.container section h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  font-family: "Muli", sans-serif;
+  padding: 15px 20px;
+  border-bottom: 3px solid #e5e5e5;
+}
+.container section img {
+  width: 100%;
+  border-top: 3px solid #e5e5e5;
+  border-bottom: 3px solid #e5e5e5;
+}
+.container .details {
+  display: flex;
+  width: 100%;
+  height: auto;
+  font-size: 1.4rem;
+  font-family: "Muli", sans-serif;
+}
+.container .details div {
+  width: 50%;
+  padding: 15px 0 15px 20px;
+  text-align: left;
+}
+.container .details div:first-child {
+  font-weight: 900;
+}
+.container .details ul li {
+  line-height: 2.5rem;
+}
+.container .one-third {
+  width: calc(40% - 40px);
+  height: auto;
+}
+.container .two-thirds {
+  width: calc(60% - 40px);
+  height: auto;
+}
+.container .two-thirds h3 {
+  width: 100%;
+}
+.container .two-thirds .mid-header {
+  border-top: 3px solid #e5e5e5;
+  margin-top: 15px;
+}
+.container .two-thirds p {
+  font-family: "Muli", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding: 20px;
+}
+.container div.resume {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 1.4rem;
+  font-family: "Muli", sans-serif;
+  padding-top: 30px;
+}
+.container div.resume div.info-section {
+  width: 25%;
+  padding-left: 20px;
+  text-align: left;
+}
+.container div.resume div.info-section ul li {
+  line-height: 2.5rem;
+}
+.container div.resume div.info-section:nth-child(odd) {
+  font-weight: 900;
+}
+.container div.resume .fa-star {
+  color: #ffae00;
+}
+.container div.contact {
+  display: flex;
+  width: 100%;
+  font-family: "Muli", sans-serif;
+  font-size: 1.4rem;
+}
+.container div.contact div {
+  padding: 20px;
+  line-height: 2.5rem;
+}
+.container div.contact div:first-child {
+  width: 25%;
+  font-weight: 700;
+}
+.container div.contact a {
+  color: #0067d0;
+  text-decoration: none;
+  font-weight: 700;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+.container div.contact a:hover {
+  color: #003e7e;
+}
+.container div.contact {
+  display: flex;
+  width: 100%;
+  font-family: "Muli", sans-serif;
+  font-size: 1.4rem;
+}
+.container div.contact div {
+  padding: 20px;
+  line-height: 2.5rem;
+}
+.container div.contact div:first-child {
+  width: 25%;
+  font-weight: 700;
+}
+.container div.contact a {
+  color: #0067d0;
+  text-decoration: none;
+  font-weight: 700;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+.container div.contact a:hover {
+  color: #003e7e;
+}
+.container section:last-child {
+  width: calc(100% - 53px);
+  margin-top: 25px;
+}
+.container section:last-child h3 {
+  width: 100%;
+}
+.container section:last-child .work-item-wrap {
+  width: 100%;
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.container section:last-child .company-details {
+  width: 15%;
+  height: 120px;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.container section:last-child .first {
+  background-image: url("../img/square_nyp_black.png");
+  background-color: #cc3333;
+}
+.container section:last-child .second {
+  background-image: url("../img/tremor-video-dsp.png");
+  border: 1px solid #e5e5e5;
+}
+.container section:last-child .third {
+  background-image: url("../img/future-memories.jpg");
+  background-size: 100%;
+}
+.container section:last-child .fourth {
+  background-image: url("../img/artispot.jpg");
+  background-size: 100%;
+}
+.container section:last-child .work-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+  font-family: "Muli", sans-serif;
+  padding: 0 20px 20px;
+}
+.container section:last-child .work-item h4 {
+  width: 90%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0 0 5px 0;
+  border-bottom: 3px solid #e5e5e5;
+  margin-bottom: 10px;
+}
+.container section:last-child .work-item p {
+  width: 90%;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+@media (max-width: 500px) {
+  .container {
+    flex-direction: column;
+    margin: 20px 20px 0;
+    padding-bottom: 0;
+  }
+  .container header {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px 0 0;
+    margin: 0;
+  }
+  .container header h1 {
+    width: 100%;
+    text-align: center;
+  }
+  .container header nav {
+    flex-direction: column;
+    margin: 30px 0 0;
+    width: 100%;
+  }
+  .container header nav a {
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  .container header nav a:first-child {
+    border-top-left-radius: 0;
+  }
+  .container header nav a:last-child {
+    border-top-right-radius: 0;
+  }
+  .container header nav a:not(:last-child) {
+    border-bottom: 1px solid #ffffff;
+  }
+  .container .one-third,
+  .container .two-thirds {
+    width: 100%;
+  }
+  .container .two-thirds {
+    border-top: 3px solid #e5e5e5;
+    border-bottom: 3px solid #e5e5e5;
+  }
+  .container div.resume div.info-section {
+    width: 50%;
+  }
+  .container div.contact div:first-child {
+    width: 35%;
+  }
+  .container section.full-length {
+    width: 100%;
+    margin-top: 0;
+  }
+  .container section:last-child div.work-item-wrap {
+    margin: 20px 0;
+  }
+  .container section:last-child div.company-details {
+    width: 25%;
+    height: 90px;
+  }
+  .container section:last-child div.work-item {
+    width: 75%;
+    padding: 0 0 20px 20px;
+  }
+}

@@ -4,56 +4,529 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
+
+//Font Imports
+@import url("https://fonts.googleapis.com/css?family=Muli:400,600,700,800");
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+//Variables
+@muli: "Muli", sans-serif;
+@platinum: #ffffff;
+@mercury: #e5e5e5;
+@yellow-sea: #ffae00;
+@science-blue: #0067d0;
+@congress-blue: #003e7e;
+@dodger-blue: #389aff;
+
+//Mixins
+.flexit {
+  display: flex;
+  flex-wrap: wrap;
 }
 
+.border-it {
+  border-bottom: 3px solid @mercury;
+}
+
+.border-all {
+  border-top: 3px solid @mercury;
+  border-bottom: 3px solid @mercury;
+}
+
+html,
+body {
+  font-size: 10px;
+  font-size: 62.5%;
+  height: 100%;
+}
+
+.container {
+  .flexit();
+  justify-content: space-evenly;
+  align-items: initial;
+  height: auto;
+  max-width: 1024px;
+  margin: 0 auto;
+  background-color: @mercury;
+  padding-bottom: 20px;
+
+  header {
+    display: flex;
+    width: 100%;
+    margin-top: 40px;
+    padding: 20px 30px;
+
+    h1 {
+      font-family: @muli;
+      font-size: 2.75rem;
+      font-weight: 700;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      font-family: @muli;
+      width: 320px;
+      align-items: center;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-left: 30px;
+      border-bottom: 3px solid @yellow-sea;
+
+      a {
+        text-decoration: none;
+        background-color: @science-blue;
+        padding: 5px 12px;
+        color: #fff;
+        margin-right: 1px;
+        transition-duration: 0.5s;
+        cursor: pointer;
+      }
+
+      a:first-child {
+        border-top-left-radius: 3px;
+      }
+
+      a:last-child {
+        border-top-right-radius: 3px;
+      }
+
+      a:hover {
+        background-color: @dodger-blue;
+      }
+    }
+  }
+
+  section {
+    background-color: @platinum;
+
+    h3 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      font-family: @muli;
+      padding: 15px 20px;
+      .border-it();
+    }
+
+    img {
+      width: 100%;
+      border-top: 3px solid @mercury;
+      .border-it();
+    }
+  }
+
+  .details {
+    display: flex;
+    width: 100%;
+    height: auto;
+    font-size: 1.4rem;
+    font-family: @muli;
+
+    div {
+      width: 50%;
+      padding: 15px 0 15px 20px;
+      text-align: left;
+    }
+
+    div:first-child {
+      font-weight: 900;
+    }
+
+    ul li {
+      line-height: 2.5rem;
+    }
+  }
+
+  .one-third {
+    width: calc(40% - 40px);
+    height: auto;
+  }
+
+  .two-thirds {
+    width: calc(60% - 40px);
+    height: auto;
+
+    h3 {
+      width: 100%;
+    }
+
+    .mid-header {
+      border-top: 3px solid @mercury;
+      margin-top: 15px;
+    }
+
+    p {
+      font-family: @muli;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      padding: 20px;
+    }
+  }
+
+  div.resume {
+    .flexit();
+    width: 100%;
+    font-size: 1.4rem;
+    font-family: @muli;
+    padding-top: 30px;
+
+    div.info-section {
+      width: 25%;
+      padding-left: 20px;
+      text-align: left;
+
+      ul li {
+        line-height: 2.5rem;
+      }
+    }
+
+    div.info-section:nth-child(odd) {
+      font-weight: 900;
+    }
+
+    .fa-star {
+      color: @yellow-sea;
+    }
+  }
+
+  div.contact {
+    display: flex;
+    width: 100%;
+    font-family: @muli;
+    font-size: 1.4rem;
+
+    div {
+      padding: 20px;
+      line-height: 2.5rem;
+    }
+
+    div:first-child {
+      width: 25%;
+      font-weight: 700;
+    }
+
+    a {
+      color: @science-blue;
+      text-decoration: none;
+      font-weight: 700;
+      transition-duration: 0.5s;
+      cursor: pointer;
+    }
+
+    a:hover {
+      color: @congress-blue;
+    }
+  }
+
+  div.contact {
+    display: flex;
+    width: 100%;
+    font-family: @muli;
+    font-size: 1.4rem;
+
+    div {
+      padding: 20px;
+      line-height: 2.5rem;
+    }
+
+    div:first-child {
+      width: 25%;
+      font-weight: 700;
+    }
+
+    a {
+      color: @science-blue;
+      text-decoration: none;
+      font-weight: 700;
+      transition-duration: 0.5s;
+      cursor: pointer;
+    }
+
+    a:hover {
+      color: @congress-blue;
+    }
+  }
+
+  section:last-child {
+    width: calc(100% - 53px);
+    margin-top: 25px;
+
+    h3 {
+      width: 100%;
+    }
+
+    .work-item-wrap {
+      width: 100%;
+      margin: 20px;
+      .flexit();
+    }
+
+    // .work-item-divider {
+    //   width: 90%;
+    //   height: 5px;
+    //   background-color: @mercury;
+    //   margin: 10px auto;
+    // }
+
+    .company-details {
+      width: 15%;
+      height: 120px;
+      background-size: 70%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .first {
+      background-image: url("../img/square_nyp_black.png");
+      background-color: #cc3333;
+    }
+
+    .second {
+      background-image: url("../img/tremor-video-dsp.png");
+      border: 1px solid @mercury;
+    }
+
+    .third {
+      background-image: url("../img/future-memories.jpg");
+      background-size: 100%;
+    }
+
+    .fourth {
+      background-image: url("../img/artispot.jpg");
+      background-size: 100%;
+    }
+
+    .work-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 85%;
+      font-family: @muli;
+      padding: 0 20px 20px;
+
+      h4 {
+        width: 90%;
+        font-size: 1.5rem;
+        font-weight: 700;
+        padding: 0 0 5px 0;
+        .border-it();
+        margin-bottom: 10px;
+      }
+
+      p {
+        width: 90%;
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    margin: 20px 20px 0;
+    padding-bottom: 0;
+
+    header {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 30px 0 0;
+      margin: 0;
+
+      h1 {
+        width: 100%;
+        text-align: center;
+      }
+
+      nav {
+        flex-direction: column;
+        margin: 30px 0 0;
+        width: 100%;
+
+        a {
+          width: 100%;
+          font-size: 2rem;
+          text-align: center;
+          padding: 1rem 0;
+        }
+
+        a:first-child {
+          border-top-left-radius: 0;
+        }
+
+        a:last-child {
+          border-top-right-radius: 0;
+        }
+
+        a:not(:last-child) {
+          border-bottom: 1px solid @platinum;
+        }
+      }
+    }
+
+    .one-third,
+    .two-thirds {
+      width: 100%;
+    }
+
+    .two-thirds {
+      .border-all();
+    }
+
+    div.resume div.info-section {
+      width: 50%;
+    }
+    div.contact div:first-child {
+      width: 35%;
+    }
+
+    section.full-length {
+      width: 100%;
+      margin-top: 0;
+    }
+
+    section:last-child {
+      div.work-item-wrap {
+        margin: 20px 0;
+      }
+
+      div.company-details {
+        width: 25%;
+        height: 90px;
+      }
+
+      div.work-item {
+        width: 75%;
+        padding: 0 0 20px 20px;
+      }
+    }
+  }
+}
